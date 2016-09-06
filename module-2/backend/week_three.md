@@ -27,9 +27,21 @@ Note: When you're done, submit a PR with a reflection in the comments about how 
 8. What is an example of a route helper? When would you use them?
   * model_path(model), I could use them in a link_to that models show page
 9. What's the difference between what `_url` and `_path` return when combined with a routes prefix?
-  * 
+  * _path is the most used, especially in views but _url is used when you want the specific url route to be displayed, most often used in controller
 10. What are strong params and why are the necessary?
+  * this is defining a method to determine which params can be updated for security reasons, defined in the controller
 11. What role does `form_for` play in helping us create our forms?
+  * This generates a standard form for an instance variable
 12. How does `form_for` know where to submit the user's input?
+  * It looks to the controller for the path
 13. Create a form using a `form_for` helper to create a new `Horse`. 
+  *<%= form_for(@horse) do |f| %>
+
+  *<%= f.label :name %>
+  *<%= f.text_field :name %>
+
+  *<%= f.submit %>
+*<% end %>
+
 14. Why do we want to validate our models?
+  * This is to protect the data in our models, this ensures that certain parameters are present and that certain paramters are validated for uniqueness
