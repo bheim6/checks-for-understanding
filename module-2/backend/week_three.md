@@ -20,9 +20,14 @@ Note: When you're done, submit a PR with a reflection in the comments about how 
 5. What do Controllers generally inherit from in a rails project?
   * ApplicationController
 6. How would I create a route if I wanted to see a specific horse in my routes fitle assuming I'm sticking to standard conventions and that I didn't want other CRUD functionality?
+  * get '/horses/:id' 'horses#show'
+  * resources :horses, only: [:show] 
 7. What rake task is useful when looking at routes, and what information does it give you?
+  * rake routes, this gives you the prefix, verb, path, and controller/action info for all routes currently in the project
 8. What is an example of a route helper? When would you use them?
+  * model_path(model), I could use them in a link_to that models show page
 9. What's the difference between what `_url` and `_path` return when combined with a routes prefix?
+  * 
 10. What are strong params and why are the necessary?
 11. What role does `form_for` play in helping us create our forms?
 12. How does `form_for` know where to submit the user's input?
