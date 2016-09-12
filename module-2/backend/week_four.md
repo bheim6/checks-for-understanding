@@ -22,9 +22,14 @@ Note: When you're done, submit a PR with a reflection in the comments about how 
 * What’s the difference between authentication and authorization?
   * Authorization cannot happen without Authentication, Authorization is determining whether or not a certain user has access to certain things on the site, ex: regular user, or admin?
 * What’s a before filter?
-  * 
+  * This is a filter that runs certain blocks of code before each action in a controller, can be scoped to only occure before certain actions
 * How do we keep track of a user once they’ve logged in?
+ * We use sessions to do this, sessions store cookies for a user and keep track of what they are doing on the site
 * When do you want to namespace a resource? When do you want to nest a resource? What's the differences between those two approaches?
+ * Namespacing is good when you want to use a module and not an object, like when using an Admin, this uses a different file structure, nested is good to use when scoping for two objects, especially helpful wiht has_many and belongs_to relationships, and uses the standard file structure 
 * At a high level, what tools can you use to implement authorization? How would you use them?
+ * Use namespacing and the idea of an Admin, can accomplish this using enum to assign default users a role of 0, and admins can be created in console with a role of 1
 * What's an enum, and what advantages does it offer? What data type needs to be in your database to use an enum? Where do you declare an enum?
+ * An enum maps values to your database and assigns them to symbols so that you can query the db. It is clean and works "behind the scenes", needs to be an integer, you declare it in the model
 * What are some strategies you can use to keep your views DRY?
+ * Use partials, that is a big way to keep views DRY, Use rails view-helpers
